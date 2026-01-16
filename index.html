@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamara Forbis | Professor of Business</title>
+    <style>
+        /* --- Embedded CSS Styles --- */
+        :root {
+            /* Color Palette - Professional and warm, nodding to CWC colors without copying them explicitly */
+            --primary-color: #2c3e50; /* Dark slate blue */
+            --secondary-color: #d35400; /* Rust orange accents */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-muted: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            /* Centering the content vertically to achieve the "half page" feel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .profile-container {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 850px; /*Limits width so it doesn't look stretched, keeping it compact */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Left Column - Image */
+        .profile-image-section {
+            flex: 2;
+            min-height: 300px;
+            position: relative;
+            background-color: #e0e0e0; /* Placeholder color while loading */
+        }
+
+        .profile-image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Right Column - Details */
+        .profile-details-section {
+            flex: 3;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Typography & Content Styles */
+        h1.name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        h2.title {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Info Styling */
+        .contact-info {
+            list-style: none;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        /* Icons (using simple CSS shapes for speed, could replace with SVG icons) */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            margin-right: 15px;
+            text-align: center;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Links */
+        a.contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        a.contact-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* JS Interaction Button */
+        .copy-btn {
+            margin-left: 10px;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                max-width: 500px;
+            }
+            .profile-image-section {
+                min-height: 350px;
+            }
+            .profile-details-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="profile-container">
+        <section class="profile-image-section">
+            <img src="image_0.png" alt="Portrait of Tamara Forbis">
+        </section>
+
+        <section class="profile-details-section">
+            <header>
+                <h1 class="name">Tamara Forbis</h1>
+                <h2 class="title">Professor of Business</h2>
+            </header>
+
+            <article class="bio">
+                <p>
+                    As a Professor of Business at <strong>Central Wyoming College (CWC)</strong>, I am dedicated to preparing students for success in the dynamic business landscape. I specialize in delivering comprehensive education that bridges theoretical knowledge with practical marketplace skills.
+                </p>
+            </article>
+
+            <ul class="contact-info">
+                <li>
+                    <span class="icon">✉</span>
+                    <a href="mailto:tforbis@cwc.edu" class="contact-link" id="email-link">tforbis@cwc.edu</a>
+                    <button class="copy-btn" id="copy-email-btn" title="Copy email to clipboard">Copy</button>
+                </li>
+                <li>
+                    <span class="icon">📍</span>
+                    <span>Office: HS134 (Health & Science Building)</span>
+                </li>
+                <li>
+                    <span class="icon">📞</span>
+                    <a href="tel:+13078552215" class="contact-link">(307) 855-2215</a>
+                </li>
+                 <li>
+                    <span class="icon">🌐</span>
+                    <a href="https://www.cwc.edu" target="_blank" rel="noopener noreferrer" class="contact-link">www.cwc.edu</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        /* --- Embedded JavaScript --- */
+        document.addEventListener('DOMContentLoaded', () => {
+            // Functionality to copy email address to clipboard
+            const copyBtn = document.getElementById('copy-email-btn');
+            const emailText = document.getElementById('email-link').innerText;
+
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(emailText).then(() => {
+                    // Feedback to user
+                    const originalText = copyBtn.innerText;
+                    copyBtn.innerText = "Copied!";
+                    copyBtn.style.backgroundColor = "#27ae60"; // Green color for success
+                    copyBtn.style.color = "white";
+
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        copyBtn.innerText = originalText;
+                        copyBtn.removeAttribute('style'); // Clear inline styles to revert to CSS defined hover states
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
