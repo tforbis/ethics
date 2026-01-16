@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Foundations of Business Ethics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .quiz-option:hover {
+            background-color: #f1f5f9;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16 px-6 text-center shadow-lg">
+        <div class="max-w-4xl mx-auto">
+            <span class="px-3 py-1 bg-blue-600 rounded-full text-xs font-semibold uppercase tracking-wider">Business Excellence Series</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-4 mb-6">Module 1: Foundations of Business Ethics</h1>
+            <p class="text-lg text-slate-300">Bridging the gap between personal values and corporate responsibility for long-term success.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky-nav bg-white/90 border-b border-gray-200 py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-around text-sm font-semibold text-slate-600">
+            <a href="#objectives" class="hover:text-blue-600 transition">Objectives</a>
+            <a href="#concepts" class="hover:text-blue-600 transition">Concepts</a>
+            <a href="#analysis" class="hover:text-blue-600 transition">Analysis</a>
+            <a href="#interactive" class="hover:text-blue-600 transition">Interactive</a>
+            <a href="#assessment" class="hover:text-blue-600 transition">Assessment</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Instructional Design Analysis Section -->
+        <section id="id-analysis" class="mb-16 bg-blue-50 p-8 rounded-2xl border-l-8 border-blue-600">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fas fa-microscope mr-3"></i> Instructional Design Analysis
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 text-sm leading-relaxed">
+                <div>
+                    <h3 class="font-bold text-blue-800 uppercase tracking-tight mb-2">Target Audience</h3>
+                    <p>Undergraduate business students or entry-level professionals. The learner likely views business as profit-centric and requires a paradigm shift towards stakeholder value.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-blue-800 uppercase tracking-tight mb-2">Pedagogical Approach</h3>
+                    <p>Constructivist framework using <strong>Gagne's Nine Events of Instruction</strong>. The lesson moves from "Gaining Attention" (scandals) to "Stimulating Recall" (personal morals) to "Applying Knowledge" (case analysis).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Objectives -->
+        <section id="objectives" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Student Learning Objectives</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Distinguish</h3>
+                    <p class="text-gray-600 text-sm">Contrast personal morals with professional ethical frameworks using real-world scenarios.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Evaluate</h3>
+                    <p class="text-gray-600 text-sm">Analyze the financial and reputational impacts of ethical decisions on business sustainability.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Synthesize</h3>
+                    <p class="text-gray-600 text-sm">Apply Stakeholder Theory to identify and balance competing interests in business dilemmas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Concepts: Morals vs Ethics -->
+        <section id="concepts" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Major Concepts & Core Terms</h2>
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div class="flex border-b">
+                    <button onclick="switchTab('morals')" id="tab-morals" class="flex-1 py-4 font-bold text-center bg-gray-100 hover:bg-white transition active-tab border-b-4 border-blue-600">Morals vs. Ethics</button>
+                    <button onclick="switchTab('stakeholders')" id="tab-stakeholders" class="flex-1 py-4 font-bold text-center bg-gray-100 hover:bg-white transition border-b-4 border-transparent">Stakeholder Theory</button>
+                </div>
+                
+                <div id="content-morals" class="tab-content active p-8">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-blue-700">The Internal Compass: Morals</h3>
+                            <p class="mb-4">Morals are an individual’s internal beliefs about right and wrong. They are personal, subjective, and often rooted in culture, religion, or family upbringing.</p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Derived from personal conviction.</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Consistent across environments.</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i> Example: A personal belief in total honesty.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-indigo-700">The Social System: Ethics</h3>
+                            <p class="mb-4">Ethics refers to rules provided by an external source—such as codes of conduct in workplaces or principles in religions.</p>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li><i class="fas fa-check text-blue-500 mr-2"></i> Governed by professional bodies/society.</li>
+                                <li><i class="fas fa-check text-blue-500 mr-2"></i> Can vary between contexts (Legal vs. Medical).</li>
+                                <li><i class="fas fa-check text-blue-500 mr-2"></i> Example: A lawyer defending a client they know is guilty.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-stakeholders" class="tab-content p-8">
+                    <h3 class="text-2xl font-bold mb-4">Moving Beyond Shareholders</h3>
+                    <p class="mb-6">While the <strong>Shareholder Primacy</strong> model argues that profit is the only social responsibility of business, <strong>Stakeholder Theory</strong> suggests that managers must serve all groups who have a "stake" in the company.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-lg text-center border border-slate-200">
+                            <i class="fas fa-user-tie text-2xl text-blue-500 mb-2"></i>
+                            <div class="font-bold">Employees</div>
+                            <div class="text-xs text-gray-500 italic">Safety, Wages, Respect</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg text-center border border-slate-200">
+                            <i class="fas fa-shopping-cart text-2xl text-green-500 mb-2"></i>
+                            <div class="font-bold">Customers</div>
+                            <div class="text-xs text-gray-500 italic">Quality, Privacy, Truth</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg text-center border border-slate-200">
+                            <i class="fas fa-tree text-2xl text-emerald-500 mb-2"></i>
+                            <div class="font-bold">Environment</div>
+                            <div class="text-xs text-gray-500 italic">Sustainability, Footprint</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg text-center border border-slate-200">
+                            <i class="fas fa-landmark text-2xl text-amber-500 mb-2"></i>
+                            <div class="font-bold">Government</div>
+                            <div class="text-xs text-gray-500 italic">Compliance, Taxes, Law</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis: Importance -->
+        <section id="analysis" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Analysis: The ROI of Ethics</h2>
+            <div class="bg-slate-900 text-white p-10 rounded-3xl relative overflow-hidden">
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Why Integrity is a Competitive Advantage</h3>
+                        <p class="text-slate-400 mb-6">Ethical behavior is no longer just "nice to have"—it's a survival mechanism in a transparent, globalized economy.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-600/20 p-2 rounded mr-4 mt-1"><i class="fas fa-shield-alt text-blue-400"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Risk Management</h4>
+                                    <p class="text-sm text-slate-400">Avoids the "ethical collapse" that led to the bankruptcy of Enron or the multi-billion dollar fines of Wells Fargo.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pink-600/20 p-2 rounded mr-4 mt-1"><i class="fas fa-heart text-pink-400"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Social Capital</h4>
+                                    <p class="text-sm text-slate-400">Builds deep trust with consumers who increasingly boycott brands based on labor practices or environmental damage.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+                        <h4 class="text-center font-bold mb-4 uppercase tracking-widest text-xs text-blue-400">The "Ethical Premium" Statistics</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1"><span>Customer Loyalty (Value-based)</span><span>73%</span></div>
+                                <div class="w-full bg-slate-700 h-2 rounded-full"><div class="bg-blue-500 h-full rounded-full" style="width: 73%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1"><span>Employee Retention (Purpose-driven)</span><span>88%</span></div>
+                                <div class="w-full bg-slate-700 h-2 rounded-full"><div class="bg-emerald-500 h-full rounded-full" style="width: 88%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1"><span>Lower Regulatory Friction</span><span>40% Reduction</span></div>
+                                <div class="w-full bg-slate-700 h-2 rounded-full"><div class="bg-amber-500 h-full rounded-full" style="width: 60%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive: Dilemma Simulator -->
+        <section id="interactive" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8">Case Simulation: The Gray Area</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
+                        <p class="text-sm italic font-medium">Scenario: You are the supply chain manager for a tech giant. You discover your main supplier uses child labor, but switching suppliers would increase costs by 15%, causing the company to miss its quarterly earnings target and potentially triggering layoffs.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="font-bold">What is your primary ethical obligation here?</p>
+                        <button onclick="simResponse(1)" class="w-full text-left p-4 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:bg-blue-50 transition">
+                            <strong>A. Shareholder Primacy:</strong> Stick with the supplier. Your primary duty is to protect the jobs of current employees and investor returns.
+                        </button>
+                        <button onclick="simResponse(2)" class="w-full text-left p-4 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:bg-blue-50 transition">
+                            <strong>B. Universal Ethics:</strong> Cut ties immediately. Human rights violations are non-negotiable, regardless of financial impact.
+                        </button>
+                        <button onclick="simResponse(3)" class="w-full text-left p-4 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:bg-blue-50 transition">
+                            <strong>C. Stakeholder Engagement:</strong> Work with the supplier to improve conditions while maintaining the contract, balancing human rights with local economic stability.
+                        </button>
+                    </div>
+                    <div id="sim-feedback" class="mt-6 p-4 rounded-lg hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment -->
+        <section id="assessment" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Final Assessment</h2>
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto border border-blue-100">
+                <div id="quiz-container">
+                    <div id="question-text" class="text-xl font-bold mb-6"></div>
+                    <div id="options-container" class="space-y-3"></div>
+                    <div id="quiz-footer" class="mt-8 flex justify-between items-center text-sm text-gray-500">
+                        <span id="progress">Question 1 of 3</span>
+                        <button id="next-btn" class="hidden bg-blue-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700">Next Question</button>
+                    </div>
+                </div>
+                <div id="quiz-result" class="hidden text-center py-8">
+                    <div class="text-5xl text-yellow-500 mb-4"><i class="fas fa-certificate"></i></div>
+                    <h3 class="text-2xl font-bold mb-2">Module Complete!</h3>
+                    <p id="score-text" class="text-gray-600 mb-6"></p>
+                    <button onclick="location.reload()" class="bg-slate-800 text-white px-8 py-3 rounded-xl font-bold">Restart Lesson</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-100 py-12 border-t border-gray-200 text-center">
+        <p class="text-slate-500 text-sm">Created by Instructional Design Team &bull; © 2024 Global Business School</p>
+    </footer>
+
+    <script>
+        // Tab Management
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('content-' + tab).classList.add('active');
+            
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('border-blue-600'));
+            document.getElementById('tab-' + tab).classList.add('border-blue-600');
+        }
+
+        // Simulation Logic
+        function simResponse(choice) {
+            const fb = document.getElementById('sim-feedback');
+            fb.classList.remove('hidden', 'bg-red-100', 'bg-green-100', 'bg-blue-100');
+            
+            if(choice === 1) {
+                fb.innerHTML = "<strong>Critical Analysis:</strong> This approach follows Milton Friedman's perspective. While it protects immediate domestic stakeholders (employees), it creates massive reputational risk if the media uncovers the practice.";
+                fb.classList.add('bg-red-100', 'text-red-800');
+            } else if(choice === 2) {
+                fb.innerHTML = "<strong>Critical Analysis:</strong> This represents the Deontological (duty-based) approach. It is morally sound but may cause collateral damage to your own employees and the supplier's workers who may lose all income.";
+                fb.classList.add('bg-blue-100', 'text-blue-800');
+            } else {
+                fb.innerHTML = "<strong>Critical Analysis:</strong> This is a modern 'Pragmatic Stakeholder' approach. It attempts to improve systemic issues without causing a sudden collapse of the supply chain.";
+                fb.classList.add('bg-green-100', 'text-green-800');
+            }
+        }
+
+        // Quiz Logic
+        const quizData = [
+            {
+                q: "Which term refers to an individual's internal belief system of right and wrong?",
+                a: ["Ethics", "Morals", "Legal Standards", "Stakeholders"],
+                correct: 1
+            },
+            {
+                q: "What is the 'Stakeholder Theory' primarily about?",
+                a: ["Focusing only on investors", "Legal compliance", "Balancing needs of all affected groups", "Maximizing quarterly profit"],
+                correct: 2
+            },
+            {
+                q: "Why is 'Risk Management' considered a benefit of business ethics?",
+                a: ["It increases taxes", "It avoids lawsuits and fines", "It guarantees product sales", "It lowers employee wages"],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            document.getElementById('question-text').innerText = q.q;
+            document.getElementById('progress').innerText = `Question ${currentQuestion + 1} of ${quizData.length}`;
+            
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            
+            q.a.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = "quiz-option w-full text-left p-4 rounded-lg border border-gray-200 transition text-sm font-medium flex justify-between items-center";
+                btn.innerHTML = `<span>${opt}</span> <i class="fas fa-chevron-right text-gray-300"></i>`;
+                btn.onclick = () => checkAnswer(i);
+                container.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(idx) {
+            const correct = quizData[currentQuestion].correct;
+            const options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach(opt => opt.disabled = true);
+            
+            if(idx === correct) {
+                options[idx].classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+                score++;
+            } else {
+                options[idx].classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+                options[correct].classList.add('bg-green-50', 'border-green-500');
+            }
+            
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        document.getElementById('next-btn').onclick = () => {
+            currentQuestion++;
+            if(currentQuestion < quizData.length) {
+                loadQuestion();
+                document.getElementById('next-btn').classList.add('hidden');
+            } else {
+                showResults();
+            }
+        };
+
+        function showResults() {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('score-text').innerText = `You scored ${score} out of ${quizData.length} correctly.`;
+        }
+
+        // Initialize
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>
